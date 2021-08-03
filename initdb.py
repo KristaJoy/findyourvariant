@@ -1,4 +1,4 @@
-from findyourvariant.app import db
+from VariantApp.app import db
 
 #db.drop_all()
 db.create_all()

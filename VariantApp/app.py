@@ -1,12 +1,10 @@
 #import libraries
-
 import os
 from flask import (
     Flask,
     render_template,
     jsonify,
-    request,
-    redirect)
+    request)
 
 # # # # # # #
 # FLASK SETUP
@@ -14,35 +12,35 @@ from flask import (
 
 app = Flask(__name__)
 
+
 # # # # # # # # #
 # DATABASE SETUP
 # # # # # # # # #
 
-from flask_sqlalchemy import flask_sqlalchemy
+from flask_sqlalchemy import SQLAlchemy
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', '') or "sqlite:///db.sqlite"
 
 # remove tracking modifications
-app.confi['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 
-from ## import ##
-
 # create route that renders index.html template
 @app.route("/")
-def home():
-    return redner_template("index.html")
-    
-# Query database and send jsonified results
-@app.route("/send", methods=["GET", "POST"])
-df send():
-    if request.method == "POST":
-        name = request.form["petName"]
-        lat = request.form["petLat"]
+def index():
+     
+    return render_template("index.html")
 
-        pet = Pet(name=name, lat=lat)
-        db.session.add(pet)
-        db.session.commit()
-        return redirect("/", code=302)
-    
-    return render template("form.html")
+# Create api route that returns desired info
+from .variant import find_variants
+
+@app.route("/api/info", methods=["GET"])
+def api():
+      
+    user_name = request.args.get("userName")
+    user_year = request.args.get("userYear")
+    return jsonify(find_variants(user_name, user_year))
+  
+        
+if __name__ == "__main__":
+    app.run(debug=True)
