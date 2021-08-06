@@ -33,6 +33,12 @@ def index():
      
     return render_template("index.html")
 
+# create route that renders index.html template
+@app.route("/data")
+def data():
+     
+    return render_template("data.html")
+
 # Create api route that returns desired info
 
 @app.route("/api/info", methods=["GET"])
