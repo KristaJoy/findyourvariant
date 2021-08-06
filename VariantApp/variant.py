@@ -62,9 +62,9 @@ def find_variants(name, year):
 
     # Create dictionary of results
     v_data = {
-        "one": f"{name} VAR # {first_letter}{four_digits[0]} | {random_jobs[0]} in {random_cities[0]} in {random_years[0]}",
-        "two": f"{name} VAR # {first_letter}{four_digits[1]} | {random_jobs[1]} in {random_cities[1]} in {random_years[1]}",
-        "three": f"{name} VAR # {first_letter}{four_digits[2]} | {random_jobs[2]} in {random_cities[2]} in {random_years[2]}",
+        "one": f"<br>{name} VAR # {first_letter}{four_digits[0]} <br> <h6>{random_jobs[0]} in {random_cities[0]} in {random_years[0]}</h6>",
+        "two": f"{name} VAR # {first_letter}{four_digits[1]} <br> <h6>{random_jobs[1]} in {random_cities[1]} in {random_years[1]}</h6>",
+        "three": f"{name} VAR # {first_letter}{four_digits[2]} <br> <h6>{random_jobs[2]} in {random_cities[2]} in {random_years[2]}</h6><br>",
     }
 
 

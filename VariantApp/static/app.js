@@ -27,16 +27,16 @@ function runEnter() {
     console.log(response);
     // Write results to page
     var variants = d3.select(".variant-list");
-    
+    var search = d3.select("h6")
+    search.html("");
     // Clear previous data
     variants.html("");
-
-    variants.append("p").text(response.one);   
-    variants.append("p").text(response.two);
-    variants.append("p").text(response.three);
-
+    variants.append("h5").html(response.one);   
+    variants.append("h6").text("—————————————————————");
+    variants.append("h5").html(response.two);
+    variants.append("h6").text("—————————————————————");
+    variants.append("h5").html(response.three);
 
   });
-
 
 };

@@ -3,18 +3,42 @@
     margin-left: auto;
     margin-right: auto;
     width: 10%;
+    padding-bottom: 50px;
 }
 .wrapper {
-background-image: url("../images/halftone.png");
-background-position: center; /* Center the image */
-background-repeat: no-repeat; /* Do not repeat the image */
-background-size: cover;
-background-blend-mode: color-dodge;
-height: 100%;
+    background-color:#1f3827;
+    background-image: url("../images/halftone.png");
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-blend-mode: color-dodge;
+    height: 100%;
+}
+
+.bkgnd {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.img-fluid {
+    height: 100%;
+}
+
+.bkimage {
+    position: relative;
+}
+
+.tvtext {
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
 }
 
 h1 {
-    font-size: 80px;
+    font-size: 97px;
     color:#fd5409;
     font-family: interstate-condensed,sans-serif;
     font-weight: 700;
@@ -30,16 +54,39 @@ h3 {
     font-style: normal;
     text-align: center;
 }
-p {
-    font-size: 18px;
-    color:rgb(225, 252, 250);
-    /* font-family: lores-12-narrow,sans-serif;
-    font-weight: 400; */
+
+  
+h5 {
+    font-size: 48px;
+    color:rgb(161, 247, 227);
+    font-family: lores-12-narrow,sans-serif;
+    font-weight: 400;
     font-style: normal;
     text-align: center;
     
 }
+h6 {
+    font-size: 38px;
+    color:rgb(161, 247, 227);
+    font-family: lores-12-narrow,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    
+}
+.neon {
+    color: #fff;
+    text-shadow:
+      0 0 3px #65836e,
+      0 0 9px #7e9e88;
+  }
 
+p {
+    font-size: 12px;
+    color:#fff;
+    font-style: normal;
+    text-align: center;
+}
 #inlineFormInput {
     font-family: interstate-condensed,sans-serif;
     font-weight: 400;
@@ -71,3 +118,21 @@ p {
     color:rgb(109, 109, 109);
 
 }
+
+a:link {
+    color: rgb(250, 209, 165);
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+a:visited {
+    color: rgb(250, 209, 165);
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+a:hover {
+    color: #fd5409;
+    background-color: transparent;
+    text-decoration: underline;
+  }
