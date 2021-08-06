@@ -9,9 +9,7 @@ from flask import (
 # # # # # # #
 # FLASK SETUP
 # # # # # # #
-
 app = Flask(__name__)
-
 
 # # # # # # # # #
 # DATABASE SETUP
@@ -23,7 +21,11 @@ app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', '') or "s
 # remove tracking modifications
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
+# Create database variable
 db = SQLAlchemy(app)
+
+# import function
+from .variant import find_variants
 
 # create route that renders index.html template
 @app.route("/")
@@ -32,13 +34,13 @@ def index():
     return render_template("index.html")
 
 # Create api route that returns desired info
-from .variant import find_variants
 
 @app.route("/api/info", methods=["GET"])
 def api():
       
     user_name = request.args.get("userName")
-    user_year = request.args.get("userYear")
+    user_year = request.args.get("userYear", type=str)
+    
     return jsonify(find_variants(user_name, user_year))
   
         
