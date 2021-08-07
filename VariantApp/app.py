@@ -26,14 +26,17 @@ db = SQLAlchemy(app)
 
 # import function
 from .variant import find_variants
+# from .models import Location
+# from .models import Profession
 
-# create route that renders index.html template
+
+# create route that renders home page
 @app.route("/")
 def index():
      
     return render_template("index.html")
 
-# create route that renders index.html template
+# create route that renders data page
 @app.route("/data")
 def data():
      

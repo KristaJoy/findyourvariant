@@ -1,10 +1,7 @@
-
 import random
 from .app import db
 from sqlalchemy.sql import text
 import pandas as pd
-from sqlalchemy.ext.declarative import declarative_base
-# Base = declarative_base()
 
 # Run function to find variants!
 def find_variants(name, year):
