@@ -11,62 +11,61 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
+<body class="wrapper">
+    
   <!-- NAV -->
-  <body class="wrapper">
-    <div class="container">
-      <div class="px-2 py-4 my-3 text-center">
-        <div class="col-lg-6 mx-auto">
-          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-            <button type="button" onClick="parent.location='/'" class="btn btn-primary btn-lg px-4 gap-3">Variants</button>
-            <button type="button" onClick="parent.location='data'" class="btn btn-outline-secondary btn-lg px-4">Data Analysis</button>
-          </div>
+  <div class="container">
+    <div class="px-2 py-4 my-3 text-center">
+      <div class="col-lg-6 mx-auto">
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+          <button type="button" onClick="parent.location='/'" class="btn btn-primary btn-lg px-4 gap-3">Variants</button>
+          <button type="button" onClick="parent.location='data'" class="btn btn-outline-secondary btn-lg px-4">Data Analysis</button>
         </div>
       </div>
-    </div> 
-    <!-- HEADER -->
-    <div class="container bkgnd">
-      <h1>FIND YOUR VARIANTS</h1>
-      <h3>Do you have variants spread out across the multiverse? Let's find 'em!</h3>
-      <br>
-      <!-- FORM -->
-      <form>
-        <div class="form-row justify-content-center">
-          <div class="col-auto">
-            <label class="sr-only" for="inlineFormInput">First Name</label>
-            <input type="text" class="form-control mb-2 userName" id="inlineFormInput" placeholder="first name">
-          </div>
-          <div class="col-auto">
-            <label class="sr-only" for="inlineFormInput">Birth Year</label>
-            <input type="text" class="form-control mb-2 userYear" id="inlineFormInput" placeholder="birth year (yyyy)">
-          </div>
-          <div class="col-auto">
-            <button type="submit" value="submit" id="buttontext" class="btn btn-secondary mb-2">Find your Variants</button>
-          </div>
+    </div>
+  </div> 
+  <!-- HEADER -->
+  <div class="container bkgnd">
+    <h1>FIND YOUR VARIANTS</h1>
+    <h3>Do you have variants spread out across the multiverse? Let's find 'em!</h3>
+    <br>
+    <!-- FORM -->
+    <form>
+      <div class="form-row justify-content-center">
+        <div class="col-auto">
+          <label class="sr-only" for="inlineFormInput">First Name</label>
+          <input type="text" class="form-control mb-2 userName" id="inlineFormInput" placeholder="first name">
         </div>
-      </form>
-    </div>  
+        <div class="col-auto">
+          <label class="sr-only" for="inlineFormInput">Birth Year</label>
+          <input type="text" class="form-control mb-2 userYear" id="inlineFormInput" placeholder="birth year (yyyy)">
+        </div>
+        <div class="col-auto">
+          <button type="submit" value="submit" id="buttontext" class="btn btn-secondary mb-2">Find your Variants</button>
+        </div>
+      </div>
+    </form>
+  </div>  
   <!-- VARIANTS -->
-    <div class="container bkgnd">
-      <div class="col-auto">
-          <div class="row justify-content-center bkimage" id="variants">
-            <img class="img-fluid" src="../static/images/screen.png">
-          <div class="tvtext">
-            <h6 style=" vertical-align: middle;">Searching...</h6>
-            <h5 class="variant-list neon"></h5>
-          </div>
+  <div class="container bkgnd">
+    <div class="col-auto">
+      <div class="row justify-content-center bkimage" id="variants">
+        <img class="img-fluid" src="../static/images/screen.png">
+        <div class="tvtext">
+          <h6 style=" vertical-align: middle;">Searching...</h6>
+          <h5 class="variant-list neon"></h5>
         </div>
       </div>
-    </div>  
+    </div>
+  </div>  
+  <!-- LOGO -->
+  <div class="container">
+    <hr>
+    <p>View code on <a href="https://github.com/KristaJoy/findyourvariant">Github.</a>  |  Original photo by <a href="https://unsplash.com/@diegoelbueno?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Diego González</a> on <a href="https://unsplash.com/s/photos/tv-screen?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+    <img src="../static/images/TVA_logo.png" alt="TVA logo" class="logo">
+  </div>  
     
-    <!-- LOGO -->
-    <div class="container">
-      <hr>
-      <p>View code on <a href="https://github.com/KristaJoy/findyourvariant">Github.</a>  |  Original photo by <a href="https://unsplash.com/@diegoelbueno?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Diego González</a> on <a href="https://unsplash.com/s/photos/tv-screen?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
-      <img src="../static/images/TVA_logo.png" alt="TVA logo" class="logo">
-    
-    </div>  
-    
-  </body>
+</body>
 </html>
 
 <!-- SCRIPTS -->

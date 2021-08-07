@@ -27,7 +27,7 @@ function runEnter() {
     console.log(response);
     // Write results to page
     var variants = d3.select(".variant-list");
-    var search = d3.select("h6")
+    var search = d3.select("h6");
     search.html("");
     // Clear previous data
     variants.html("");
