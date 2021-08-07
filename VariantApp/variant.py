@@ -6,7 +6,7 @@ import pandas as pd
 # Run function to find variants!
 def find_variants(name, year):
 
-    cities = db.engine.execute(text("SELECT City, Country FROM CitiesData"))
+    cities = db.engine.execute(text("SELECT City, Country FROM City_Data"))
     cities_db = []
     for c in cities:
         cities_db.append(c)
