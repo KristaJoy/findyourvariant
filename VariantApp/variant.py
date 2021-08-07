@@ -3,35 +3,35 @@ from .app import db
 from sqlalchemy.sql import text
 import pandas as pd
 
+
+
 # Run function to find variants!
 def find_variants(name, year):
 
-    cities = db.engine.execute(text("SELECT City, Country FROM City_Data"))
+    # Get data from db
+    cities = db.engine.execute(text("SELECT city, country FROM city_data"))
     cities_db = []
     for c in cities:
         cities_db.append(c)
-    #print(cities_db)
   
-    jobs = db.engine.execute(text("SELECT Job FROM Jobs"))
+    jobs = db.engine.execute(text("SELECT job FROM jobs"))
     jobs_db = []
     for j in jobs:
         jobs_db.append(j)
-    #print(jobs_db)
   
-   
-    cities_data = pd.DataFrame(cities_db, columns=['City', 'Country'])
-    jobs_data = pd.DataFrame(jobs_db, columns=['Job'])
-    # print(cities_data)
-    # print(jobs_data)
+    # Create dataframes from sql data
+    cities_data = pd.DataFrame(cities_db, columns=['city', 'country'])
+    jobs_data = pd.DataFrame(jobs_db, columns=['job'])
+    
 
     #Create a list of cities and pick 3 random
-    cities_data['Location'] = cities_data['City'].str.cat(cities_data['Country'], sep =", ")
-    cities_list = cities_data['Location'].values.tolist()
+    cities_data['location'] = cities_data['city'].str.cat(cities_data['country'], sep =", ")
+    cities_list = cities_data['location'].values.tolist()
     random_cities = random.choices(cities_list, k=3)
     print(random_cities)
 
     #Create a list of jobs and pick 3 random
-    job_list = jobs_data['Job'].values.tolist()
+    job_list = jobs_data['job'].values.tolist()
     random_jobs = random.choices(job_list, k=3)
     print(random_jobs)
 
