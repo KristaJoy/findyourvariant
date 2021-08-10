@@ -3,8 +3,6 @@ from .app import db
 from sqlalchemy.sql import text
 import pandas as pd
 
-
-
 # Run function to find variants!
 def find_variants(name, year):
 
@@ -43,17 +41,18 @@ def find_variants(name, year):
         four_digits.append(n)
     print(four_digits)
     
-    # Generate a list of years off their birth year and pick 3 random
-    if year is None:
-        year = "1940"
+    # # Error handling in development stage
+    # if year is "":
+    #     year = "1940"
 
-    year_list = list(range(int(year), 2021))
+    # if name is "":
+    #     name = "Loki"
+
+    # Generate a list of years off their birth year and pick 3 random
+    year_list = list(range(year, 2021))
     random_years = random.choices(year_list, k=3)
     
     # Find first letter of name
-    if name is None:
-        name = "Loki"
-
     first_letter = name[0].upper()
     name = name.upper()
 
@@ -63,6 +62,5 @@ def find_variants(name, year):
         "two": f"{name} VAR # {first_letter}{four_digits[1]} <br> <h6>{random_jobs[1]} in {random_cities[1]} in {random_years[1]}</h6>",
         "three": f"{name} VAR # {first_letter}{four_digits[2]} <br> <h6>{random_jobs[2]} in {random_cities[2]} in {random_years[2]}</h6><br>",
     }
-
 
     return v_data

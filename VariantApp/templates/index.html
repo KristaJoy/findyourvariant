@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>TVA</title>
+  <link rel="shortcut icon" type="image/jpg" href="../static/images/TVA_icon.png"/>
+
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.typekit.net/snt0gim.css">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
@@ -38,7 +41,7 @@
         </div>
         <div class="col-auto">
           <label class="sr-only" for="inlineFormInput">Birth Year</label>
-          <input type="text" class="form-control mb-2 userYear" id="inlineFormInput" placeholder="birth year (yyyy)">
+          <input type="number" class="form-control mb-2 userYear" id="inlineFormInput" placeholder="birth year (yyyy)">
         </div>
         <div class="col-auto">
           <button type="submit" value="submit" id="buttontext" class="btn btn-secondary mb-2">Find your Variants</button>

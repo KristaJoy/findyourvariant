@@ -26,9 +26,6 @@ db = SQLAlchemy(app)
 
 # import function
 from .variant import find_variants
-# from .models import Location
-# from .models import Profession
-
 
 # create route that renders home page
 @app.route("/")
@@ -43,12 +40,11 @@ def data():
     return render_template("data.html")
 
 # Create api route that returns desired info
-
 @app.route("/api/info", methods=["GET"])
 def api():
       
-    user_name = request.args.get("userName")
-    user_year = request.args.get("userYear", type=str)
+    user_name = request.args.get("userName", type=str)
+    user_year = request.args.get("userYear", type=int)
     
     return jsonify(find_variants(user_name, user_year))
   
