@@ -58,14 +58,22 @@ h2 {
 }
 
 h3 {
-    font-size: 26px;
+    font-size: 18px;
     color:rgb(255, 255, 255);
-    /* font-family: interstate-condensed, sans-serif; */
-    font-weight: lighter;
+    font-family: interstate, sans-serif;
+    font-weight: 400;
     font-style: normal;
     text-align: center;
 }
 
+h4 {
+    font-size: 24px;
+    color:rgba(131, 189, 25, 0.886);
+    font-family: interstate,sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+}
   
 h5 {
     font-size: 2.75vw;;
